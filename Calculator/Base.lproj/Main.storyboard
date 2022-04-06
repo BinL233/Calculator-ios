@@ -180,11 +180,14 @@
                                     <constraint firstAttribute="height" constant="85" id="t0p-Nn-Kt8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="%">
+                                <buttonConfiguration key="configuration" style="filled" title="π">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="piAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VF8-Gl-hTq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf2-Ex-gRd">
                                 <rect key="frame" x="112" y="291" width="85" height="85"/>
@@ -193,11 +196,14 @@
                                     <constraint firstAttribute="height" constant="85" id="UlX-nb-aHh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+/-">
+                                <buttonConfiguration key="configuration" style="filled" title=":D">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="dAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fn-F4-hss"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7w-sf-kXq">
                                 <rect key="frame" x="19" y="291" width="85" height="85"/>
@@ -253,6 +259,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title=".">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pointAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdW-dO-HCh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7C-yU-7gt">
                                 <rect key="frame" x="309" y="663" width="85" height="85"/>
@@ -287,7 +296,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-s9-2Ge">
                                 <rect key="frame" x="20" y="154" width="348" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -338,16 +347,16 @@
                     <connections>
                         <outlet property="AC" destination="n7w-sf-kXq" id="hHy-Gv-J6b"/>
                         <outlet property="Display" destination="8bC-Xf-vdC" id="Flg-ge-yYa"/>
+                        <outlet property="d" destination="yf2-Ex-gRd" id="VbB-we-acX"/>
                         <outlet property="display" destination="Sdg-s9-2Ge" id="dfa-M6-5Jg"/>
                         <outlet property="divide" destination="zCy-ZL-LaB" id="8xp-al-8O2"/>
                         <outlet property="eight" destination="X3C-9e-baH" id="yUd-rO-YMd"/>
                         <outlet property="equal" destination="c7C-yU-7gt" id="hmf-vn-FDu"/>
                         <outlet property="five" destination="EQb-m0-hcU" id="IF5-VR-9sy"/>
                         <outlet property="four" destination="ta2-HW-ZUu" id="6kh-H8-dYy"/>
-                        <outlet property="negative" destination="yf2-Ex-gRd" id="5dk-ee-GBj"/>
                         <outlet property="nine" destination="1Yq-gE-Iow" id="qnQ-1I-9xl"/>
                         <outlet property="one" destination="Wj2-02-MDx" id="lS3-2l-0BO"/>
-                        <outlet property="percent" destination="NQc-oC-wTW" id="cqu-df-KlI"/>
+                        <outlet property="pi" destination="NQc-oC-wTW" id="PQW-u5-X29"/>
                         <outlet property="plus" destination="Bhe-8h-Bje" id="lE9-M3-fKS"/>
                         <outlet property="point" destination="5Oj-iA-fir" id="h5f-Yx-dB1"/>
                         <outlet property="seven" destination="eKd-2R-W3Q" id="lH2-EK-vY8"/>

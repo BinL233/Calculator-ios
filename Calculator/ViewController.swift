@@ -13,8 +13,12 @@ class ViewController: UIViewController {
     var undetermine:Int?
     var state:String = "null"
     var state2:String = "null"
+    var vertify:String = ""
     var output:Double = 0
     var dOutput:Double = 0
+    var secret:Int = 0
+//    var fractionCount:Int = 1
+    var directAns:Bool = false
 
     @IBOutlet weak var AC: UIButton!
     
@@ -56,421 +60,312 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
+    @IBOutlet weak var pi: UIButton!
     
+    @IBOutlet weak var d: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        display.text = "\(presentNum)"
+        display.text = "0"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func zeroAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 0
-            display.text = "\(presentNum)"
-            state = "null"
-            
+        if state2 == "point" {
+            mainNumber(x: 0)
         }
         
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 0
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10
-                display.text = "\(nextNum)"
-            }
+        if display.text != "0" {
+            mainNumber(x: 0)
         }
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 0
-                display.text = "\(presentNum)"
-            }
             
-            else {
-                presentNum = (presentNum) * 10
-                display.text = "\(presentNum)"
-            }
+        if secret == 2 {
+            secret = 3
         }
     }
     
     @IBAction func oneAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 1
-            display.text = "\(presentNum)"
-            state = "null"
+        mainNumber(x: 1)
+        if secret == 3 {
+            secret = 4
         }
         
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 1
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 1
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 1
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 1
-                display.text = "\(presentNum)"
-            }
+        if secret == 5 {
+            secret = 6
         }
     }
+    
     @IBAction func twoAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 2
-            display.text = "\(presentNum)"
-            state = "null"
-       
-            
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 2
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 2
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 2
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 2
-                display.text = "\(presentNum)"
-            }
+        mainNumber(x: 2)
+        if secret == 1 {
+            secret = 2
         }
     }
     
     @IBAction func threeAct(_ sender: UIButton) {
-        
-        if state == "reset" {
-            presentNum = 3
-            display.text = "\(presentNum)"
-            state = "null"
-            
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 3
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 3
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 3
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 3
-                display.text = "\(presentNum)"
-            }
+        mainNumber(x: 3)
+        if secret == 4 {
+            secret = 5
         }
     }
     
     @IBAction func fourAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 3
-            display.text = "\(presentNum)"
-            state = "null"
-            
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 4
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 4
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 4
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 4
-                display.text = "\(presentNum)"
-            }
+        mainNumber(x: 4)
+        if secret == 6 {
+            secret = 7
         }
     }
     
     @IBAction func fiveAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 5
-            display.text = "\(presentNum)"
-            state = "null"
-            
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 5
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 5
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 5
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 5
-                display.text = "\(presentNum)"
-            }
-        }
+        mainNumber(x: 5)
+        secret = 1
     }
     
     @IBAction func sixAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 6
-            display.text = "\(presentNum)"
-            state = "null"
-            
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 6
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 6
-                display.text = "\(nextNum)"
-            }
-        }
-    
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 6
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 6
-                display.text = "\(presentNum)"
-            }
-        }
+        mainNumber(x: 6)
     }
     
     @IBAction func sevenAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 7
-            display.text = "\(presentNum)"
-            state = "null"
-        }
-        
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 7
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 7
-                display.text = "\(nextNum)"
-            }
-        }
-        
-
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 7
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 7
-                display.text = "\(presentNum)"
-            }
-        }
+        mainNumber(x: 7)
     }
     
     @IBAction func eightAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 8
-            display.text = "\(presentNum)"
-            state = "null"
-            
-        }
-        
-        else if state != "null"  {
-            if nextNum == 0 {
-                nextNum = 8
-                display.text = "\(nextNum)"
-            }
-            
-            else {
-                nextNum = (nextNum) * 10 + 8
-                display.text = "\(nextNum)"
-            }
-        }
-        
-        
-        else {
-            if presentNum == 0 {
-                presentNum = 8
-                display.text = "\(presentNum)"
-            }
-            
-            else {
-                presentNum = (presentNum) * 10 + 8
-                display.text = "\(presentNum)"
-            }
-        }
+        mainNumber(x: 8)
     }
     
     @IBAction func nineAct(_ sender: UIButton) {
-        if state == "reset" {
-            presentNum = 9
-            display.text = "\(presentNum)"
-            state = "null"
-            
+        mainNumber(x: 9)
+    }
+    
+    func mainNumber(x: Double) {
+        if display.text == "0" {
+            display.text = ""
         }
         
-        else if state != "null" {
-            if nextNum == 0 {
-                nextNum = 9
-                display.text = "\(nextNum)"
+        if vertify == display.text {
+            display.text = ""
+            
+            if state2 == "reset" {
+                presentNum = 0
+                nextNum = 0
             }
             
-            else {
-                nextNum = (nextNum) * 10 + 9
-                display.text = "\(nextNum)"
+            else if state2 == "continue" {
+                nextNum = 0
             }
         }
         
+        if state2 == "reset" {
+            display.text! += String(x.clean)
+            presentNum = Double(display.text!)!
+        }
+        
+        else if state2 == "continue" {
+            display.text! += String(x.clean)
+            nextNum = Double(display.text!)!
+        }
+        
+        
+        else if state != "null"{
+            display.text! += String(x.clean)
+            nextNum = Double(display.text!)!
+        }
         
         else {
-            if presentNum == 0 {
-                presentNum = 9
-                display.text = "\(presentNum)"
+            display.text! += String(x.clean)
+            presentNum = Double(display.text!)!
+        }
+    
+
+    }
+    
+    
+    @IBAction func pointAct(_ sender: UIButton) {
+        for x in display.text! {
+            if x == "." {
+                return
             }
-            
-            else {
-                presentNum = (presentNum) * 10 + 9
-                display.text = "\(presentNum)"
-            }
+        }
+        display.text! += "."
+    }
+    
+    @IBAction func piAct(_ sender: UIButton) {
+        mainNumber(x: 3.14159265358979323846)
+    }
+    
+    
+    @IBAction func dAct(_ sender: UIButton) {
+        if secret == 7 {
+            display.text = "YOUZI I LOVE YOU !!!"
+            display.font = UIFont.systemFont(ofSize: 35.0)
+            display.textColor = UIColor(red: 242/255, green: 235/255, blue: 250/255, alpha: 1.0)
         }
     }
     
+    
     @IBAction func ACAct(_ sender: UIButton) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
         presentNum = 0
-        display.text = "\(presentNum)"
+        display.text = "0"
+        presentNum = Double(display.text!)!
+        nextNum = Double(display.text!)!
         state = "null"
+        state2 = "null"
+        directAns = false
     }
     
     @IBAction func substructionAct(_ sender: UIButton) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
+        vertify = display.text!
         state = "substruction"
-        if state == "reset" {
-            state = "continue"
+        if directAns == true {
+            equalf2()
         }
+        
+        if state2 == "reset" {
+            vertify = display.text!
+            state2 = "continue"
+        }
+        directAns = true
+            
+        
     }
+
     
     @IBAction func divideAct(_ sender: UIButton) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
+        vertify = display.text!
         state = "divide"
-        if state == "reset" {
-            state = "continue"
+        if directAns == true {
+            equalf2()
         }
+        
+        if state2 == "reset" {
+            vertify = display.text!
+            state2 = "continue"
+        }
+        directAns = true
+        
+
     }
     
     
     @IBAction func timesACt(_ sender: UIButton) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
+        vertify = display.text!
         state = "times"
-        if state == "reset" {
-            state = "continue"
+        if directAns == true {
+            equalf2()
         }
+        
+        if state2 == "reset" {
+            vertify = display.text!
+            state2 = "continue"
+        }
+        directAns = true
+
+
     }
     
     @IBAction func plusAct(_ sender: UIButton) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
+        vertify = display.text!
         state = "plus"
-        if state == "reset" {
-            state = "continue"
+        if directAns == true {
+            equalf2()
         }
+        
+        if state2 == "reset" {
+            vertify = display.text!
+            state2 = "continue"
+        }
+        directAns = true
+
+        
         
     }
     
     
     
     @IBAction func equalAct(_ sender: UIButton) {
+        equalf()
+    }
+    
+    
+    func equalf() {
+        display.font = UIFont.systemFont(ofSize: 45.0)
         if state == "substruction" {
             output = Double(presentNum - nextNum)
-            display.text = "\(output)"
+            display.text = "\(output.clean)"
         }
         
         else if state == "divide" {
             output = presentNum / nextNum
 
-            display.text = "\(output)"
+            display.text = "\(output.clean)"
             
         }
         
         else if state == "times" {
             output = Double(presentNum * nextNum)
-            display.text = "\(output)"
+            display.text = "\(output.clean)"
         }
         
         else {
             output = Double(presentNum + nextNum)
-            display.text = "\(output)"
+            display.text = "\(output.clean)"
         }
         
         
-        state = "reset"
+        state = "null"
+        state2 = "reset"
+        directAns = false
         presentNum = output
         nextNum = 0
     }
     
     
-    
+    func equalf2() {
+        display.font = UIFont.systemFont(ofSize: 45.0)
+        if state == "substruction" {
+            output = Double(presentNum - nextNum)
+            display.text = "\(output.clean)"
+        }
+        
+        else if state == "divide" {
+            output = presentNum / nextNum
+
+            display.text = "\(output.clean)"
+            
+        }
+        
+        else if state == "times" {
+            output = Double(presentNum * nextNum)
+            display.text = "\(output.clean)"
+        }
+        
+        else {
+            output = Double(presentNum + nextNum)
+            display.text = "\(output.clean)"
+        }
+        
+        
+        state = "null"
+        state2 = "reset"
+        directAns = true
+        presentNum = output
+        nextNum = 0
+    }
+       
 }
+
+extension Double {
+    var clean: String {
+       return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+    }
+}
+
+
+
 
