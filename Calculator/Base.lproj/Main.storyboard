@@ -25,6 +25,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="1">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="oneAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hw-5s-Zf1"/>
@@ -39,6 +40,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="0">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="zeroAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d47-JQ-dln"/>
@@ -53,6 +55,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="4">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="fourAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eG-cX-N15"/>
@@ -67,6 +70,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="5">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="fiveAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l6v-gW-rre"/>
@@ -81,6 +85,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="6">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sixAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pha-aF-nhK"/>
@@ -110,6 +115,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="7">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sevenAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tWE-EU-1m9"/>
@@ -124,6 +130,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="8">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="eightAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOe-S5-9bu"/>
@@ -138,6 +145,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="9">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nineAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJy-Y1-K4A"/>
@@ -230,6 +238,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="2">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="twoAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGH-nu-dpP"/>
@@ -244,6 +253,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="3">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="threeAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsU-qf-dmn"/>
@@ -258,6 +268,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=".">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.40428834733512942" green="0.59633909163564325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pointAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdW-dO-HCh"/>
@@ -302,7 +313,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rbl-6N-oSg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="71.5" id="0ie-5i-tAt"/>
                             <constraint firstItem="c7C-yU-7gt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="257.5" id="AtE-92-egc"/>
@@ -380,7 +391,7 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
+        <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
