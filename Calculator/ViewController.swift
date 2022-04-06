@@ -82,6 +82,10 @@ class ViewController: UIViewController {
             
         if secret == 2 {
             secret = 3
+            
+        }
+        else {
+            secret = 0
         }
     }
     
@@ -91,8 +95,12 @@ class ViewController: UIViewController {
             secret = 4
         }
         
-        if secret == 5 {
+        else if secret == 5 {
             secret = 6
+        }
+        
+        else {
+            secret = 0
         }
     }
     
@@ -101,6 +109,10 @@ class ViewController: UIViewController {
         if secret == 1 {
             secret = 2
         }
+        
+        else {
+            secret = 0
+        }
     }
     
     @IBAction func threeAct(_ sender: UIButton) {
@@ -108,12 +120,18 @@ class ViewController: UIViewController {
         if secret == 4 {
             secret = 5
         }
+        else {
+            secret = 0
+        }
     }
     
     @IBAction func fourAct(_ sender: UIButton) {
         mainNumber(x: 4)
         if secret == 6 {
             secret = 7
+        }
+        else {
+            secret = 0
         }
     }
     
@@ -124,22 +142,34 @@ class ViewController: UIViewController {
     
     @IBAction func sixAct(_ sender: UIButton) {
         mainNumber(x: 6)
+        secret = 0
     }
     
     @IBAction func sevenAct(_ sender: UIButton) {
         mainNumber(x: 7)
+        secret = 0
     }
     
     @IBAction func eightAct(_ sender: UIButton) {
         mainNumber(x: 8)
+        secret = 0
     }
     
     @IBAction func nineAct(_ sender: UIButton) {
         mainNumber(x: 9)
+        secret = 0
     }
     
     func mainNumber(x: Double) {
+        display.font = UIFont.systemFont(ofSize: 45.0)
         if display.text == "0" {
+            display.text = ""
+        }
+        if display.text == "YOUZI I LOVE YOU !!!" {
+            display.text = ""
+        }
+        
+        else if display.text == "INCORRECT CODE" {
             display.text = ""
         }
         
@@ -182,6 +212,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func pointAct(_ sender: UIButton) {
+        secret = 0
         for x in display.text! {
             if x == "." {
                 return
@@ -191,6 +222,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func piAct(_ sender: UIButton) {
+        secret = 0
         mainNumber(x: 3.14159265358979323846)
     }
     
@@ -200,11 +232,19 @@ class ViewController: UIViewController {
             display.text = "YOUZI I LOVE YOU !!!"
             display.font = UIFont.systemFont(ofSize: 35.0)
             display.textColor = UIColor(red: 242/255, green: 235/255, blue: 250/255, alpha: 1.0)
+            view.backgroundColor = UIColor(red: 171/255, green: 108/255, blue: 154/255, alpha: 1.0)
+        }
+        
+        else {
+            secret = 0
+            display.text = "INCORRECT CODE"
+            display.font = UIFont.systemFont(ofSize: 35.0)
         }
     }
     
     
     @IBAction func ACAct(_ sender: UIButton) {
+        secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         presentNum = 0
         display.text = "0"
@@ -216,6 +256,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func substructionAct(_ sender: UIButton) {
+        secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         vertify = display.text!
         state = "substruction"
@@ -234,6 +275,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func divideAct(_ sender: UIButton) {
+        secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         vertify = display.text!
         state = "divide"
@@ -252,6 +294,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func timesACt(_ sender: UIButton) {
+        secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         vertify = display.text!
         state = "times"
@@ -269,6 +312,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusAct(_ sender: UIButton) {
+        secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         vertify = display.text!
         state = "plus"
@@ -289,6 +333,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func equalAct(_ sender: UIButton) {
+        secret = 0
         equalf()
     }
     
