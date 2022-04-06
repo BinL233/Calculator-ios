@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var output:Double = 0
     var dOutput:Double = 0
     var secret:Int = 0
+    var code = [Int]()
+    var codeVer:String = ""
 //    var fractionCount:Int = 1
     var directAns:Bool = false
 
@@ -72,6 +74,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func zeroAct(_ sender: UIButton) {
+        code.append(0)
+        
         if state2 == "point" {
             mainNumber(x: 0)
         }
@@ -91,6 +95,7 @@ class ViewController: UIViewController {
     
     @IBAction func oneAct(_ sender: UIButton) {
         mainNumber(x: 1)
+        code.append(1)
         if secret == 3 {
             secret = 4
         }
@@ -106,6 +111,7 @@ class ViewController: UIViewController {
     
     @IBAction func twoAct(_ sender: UIButton) {
         mainNumber(x: 2)
+        code.append(2)
         if secret == 1 {
             secret = 2
         }
@@ -117,6 +123,7 @@ class ViewController: UIViewController {
     
     @IBAction func threeAct(_ sender: UIButton) {
         mainNumber(x: 3)
+        code.append(3)
         if secret == 4 {
             secret = 5
         }
@@ -127,6 +134,7 @@ class ViewController: UIViewController {
     
     @IBAction func fourAct(_ sender: UIButton) {
         mainNumber(x: 4)
+        code.append(4)
         if secret == 6 {
             secret = 7
         }
@@ -137,34 +145,47 @@ class ViewController: UIViewController {
     
     @IBAction func fiveAct(_ sender: UIButton) {
         mainNumber(x: 5)
+        code.append(5)
         secret = 1
     }
     
     @IBAction func sixAct(_ sender: UIButton) {
         mainNumber(x: 6)
+        code.append(6)
         secret = 0
     }
     
     @IBAction func sevenAct(_ sender: UIButton) {
         mainNumber(x: 7)
+        code.append(7)
         secret = 0
     }
     
     @IBAction func eightAct(_ sender: UIButton) {
         mainNumber(x: 8)
+        code.append(8)
         secret = 0
     }
     
     @IBAction func nineAct(_ sender: UIButton) {
         mainNumber(x: 9)
+        code.append(9)
         secret = 0
     }
     
     func mainNumber(x: Double) {
         display.font = UIFont.systemFont(ofSize: 45.0)
+        
+        if codeVer != "" {
+            display.text = "0"
+            code.removeAll()
+            codeVer = ""
+        }
+        
         if display.text == "0" {
             display.text = ""
         }
+        
         if display.text == "YOUZI I LOVE YOU !!!" {
             display.text = ""
         }
@@ -233,17 +254,50 @@ class ViewController: UIViewController {
             display.font = UIFont.systemFont(ofSize: 35.0)
             display.textColor = UIColor(red: 242/255, green: 235/255, blue: 250/255, alpha: 1.0)
             view.backgroundColor = UIColor(red: 171/255, green: 108/255, blue: 154/255, alpha: 1.0)
+            secret = 0
         }
         
         else {
-            secret = 0
-            display.text = "INCORRECT CODE"
-            display.font = UIFont.systemFont(ofSize: 35.0)
+            for x in code {
+                codeVer += String(x)
+            }
+            
+            if codeVer == "114514" {
+                display.font = UIFont.systemFont(ofSize: 25.0)
+                display.text = "哼哼哼~啊啊啊啊啊啊啊啊!!!"
+            }
+            
+            else if codeVer == "20001127" {
+                display.font = UIFont.systemFont(ofSize: 25.0)
+                display.text = "这是柚柚的生日！"
+            }
+            
+            else if codeVer == "20020227" {
+                display.font = UIFont.systemFont(ofSize: 25.0)
+                display.text = "这是乐乐的生日！"
+            }
+            
+            else if codeVer == "20210228" {
+                display.font = UIFont.systemFont(ofSize: 25.0)
+                display.text = "这是乐乐和柚柚在一起的日子！"
+            }
+            
+            else {
+                code.removeAll()
+                codeVer = ""
+                secret = 0
+                display.text = "INCORRECT CODE"
+                display.font = UIFont.systemFont(ofSize: 35.0)
+            }
+            
         }
+        
     }
     
     
     @IBAction func ACAct(_ sender: UIButton) {
+        code.removeAll()
+        codeVer = ""
         secret = 0
         display.font = UIFont.systemFont(ofSize: 45.0)
         presentNum = 0
