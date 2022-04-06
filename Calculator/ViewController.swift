@@ -234,6 +234,17 @@ class ViewController: UIViewController {
     
     @IBAction func pointAct(_ sender: UIButton) {
         secret = 0
+        if state2 == "reset" {
+            display.text = "0"
+            presentNum = 0
+            nextNum = 0
+        }
+        
+        else if state2 == "continue" {
+            display.text = "0"
+            nextNum = 0
+        }
+        
         for x in display.text! {
             if x == "." {
                 return
