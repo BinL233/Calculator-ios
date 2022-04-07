@@ -73,6 +73,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var shouldAutorotate : Bool {
+        return false
+    }
+    
     @IBAction func zeroAct(_ sender: UIButton) {
         code.append(0)
         
@@ -255,7 +259,16 @@ class ViewController: UIViewController {
     
     @IBAction func piAct(_ sender: UIButton) {
         secret = 0
-        mainNumber(x: 3.14159265358979323846)
+        if display.text == "" {
+            mainNumber(x: 3.14159265358979323846)
+        }
+        
+        else {
+            let num:Double = 3.14159265358979323846 * Double(display.text!)!
+            
+            display.text = ""
+            mainNumber(x: num)
+        }
     }
     
     
@@ -475,6 +488,7 @@ extension Double {
        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
     }
 }
+
 
 
 
